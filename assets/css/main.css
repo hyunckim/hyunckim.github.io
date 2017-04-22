@@ -85,6 +85,10 @@
 		width: 60em;
 	}
 
+	.portfolio-picture {
+		border-radius: 20px;
+	}
+
 	@media screen and (max-width: 1680px) {
 
 		.container.\31 25\25 {
