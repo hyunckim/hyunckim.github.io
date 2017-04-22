@@ -85,16 +85,6 @@
 		width: 60em;
 	}
 
-	.portfolio-picture {
-  display: inline-block;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
 	@media screen and (max-width: 1680px) {
 
 		.container.\31 25\25 {
