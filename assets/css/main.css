@@ -3763,3 +3763,8 @@
 	#projects {
 		display: flex;
 	}
+
+	.project-header {
+		margin-left: auto;
+		margin-right: auto;
+	}
