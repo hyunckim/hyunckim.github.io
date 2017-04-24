@@ -12,6 +12,15 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-98000101-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
 	</head>
 	<body class="landing">
 		<div id="page-wrapper">
@@ -23,19 +32,44 @@
 						<ul>
 							<li><a href="https://www.linkedin.com/in/hyun-james-kim-531668a2/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
 							<li><a href="https://github.com/hyunckim" class="icon fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#">Resume</a></li>
+							<li><a href="./hyun_kim_resume.pdf">Resume</a></li>
 							<li><a href="#about">About Me</a></li>
 							<li><a href="#projects">Projects</a></li>
-							<li><a href="#">Contact</a></li>
+							<li><a href="#contact">Contact</a></li>
 						</ul>
 					</nav>
 				</header>
 
 			<!-- Banner -->
 				<section id="banner">
-					<h3>Software Engineer</h3>
-					<h3>Let's build something amazing together</h3>
+					<h3 id="intro"></h3>
+					<h3 id="intro2"></h3>
+					<h3 id="intro3"></h3>
+					<ul class="actions">
+						<li><a href="./hyun_kim_resume.pdf" class="button special">Resume</a></li>
+						<li><a href="#contact" class="button">Contact</a></li>
+					</ul>
 				</section>
+
+				<script>
+					let intro1 = "Hello, my name is Hyun.".split('');
+					let intro2 = "Welcome to my portfolio.".split('');
+					let intro3 = "Let's build something amazing together.".split('');
+					let element = document.getElementById("intro");
+					let element2 = document.getElementById("intro2");
+					let element3 = document.getElementById("intro3");
+					let interval = setInterval(() => {
+						if (intro1.length) {
+							element.innerHTML = element.textContent + intro1.shift();
+						} else if (intro2.length) {
+							element2.innerHTML = element2.textContent + intro2.shift();
+						} else if (intro3.length) {
+							element3.innerHTML = element3.textContent + intro3.shift();
+						} else {
+							clearInterval(interval);
+						}
+					}, 100);
+				</script>
 
 			<!-- Main -->
 				<section id="main" class="container">
@@ -43,16 +77,16 @@
 					<section class="box special">
 						<header class="major" id="about">
 							<h2>About me</h2>
-							<img src="images/portfolio_headshot.jpg" alt="" class="portfolio-picture" width="150px" border-radius="50%"/>
 							<p>I am a graduate from University of California, Los Angeles with a Bachelors degree in Statistics. I love to rock climb, listen to music and just go out for a cold brew on a Friday night . I am currently seeking for an opportunity in software engineering where I can apply my knowledge and skills. I hope to find a work place where I can gain insight on the field and expand mentors while making a valuable contribution to your team.</p>
 						</header>
+						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
 					</section>
 
 					<section class="box special features">
 						<div class="features-row">
 							<section>
 								<span class="icon major fa-code accent2"></span>
-								<h3>Code</h3>
+								<h3>Programming</h3>
 								<p>I have experience working in Ruby, Ruby on Rails, Django, Javascript, React.js, Redux, TDD, HTML, CSS, and SQL. I am always open to learning new tools and technologies.</p>
 							</section>
 							<section>
@@ -92,7 +126,7 @@
 						<div class="6u 12u(narrower)">
 
 							<section class="box special">
-								<span class="image featured"><img src="images/pic03.jpg" alt="" /></span>
+								<span class="image featured"><img src="images/trip_planner.gif" alt="" /></span>
 								<h3>Trip Planner</h3>
 								<p>Trip Planner is visualization of implementation of Genetic Algorithm on Traveling Salesperson Problem using Javascript.</p>
 								<ul class="actions">
@@ -104,7 +138,7 @@
 						<div class="6u 12u(narrower)">
 
 							<section class="box special">
-								<span class="image featured"><img src="images/pic03.jpg" alt="" /></span>
+								<span class="image featured"><img src="images/isport.png" alt="" /></span>
 								<h3>iSport</h3>
 								<p>iSport is a full-stack web application inspired by Feedly, an RSS Feed Aggregator. Users can organize and explore feeds related to sports.
 								<ul class="actions">
@@ -117,31 +151,14 @@
 
 				</section>
 
-			<!-- CTA -->
-				<section id="cta">
-
-					<h2>Sign up for beta access</h2>
-					<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p>
-
-					<form>
-						<div class="row uniform 50%">
-							<div class="8u 12u(mobilep)">
-								<input type="email" name="email" id="email" placeholder="Email Address" />
-							</div>
-							<div class="4u 12u(mobilep)">
-								<input type="submit" value="Sign Up" class="fit" />
-							</div>
-						</div>
-					</form>
-
-				</section>
-
 			<!-- Footer -->
-				<footer id="footer">
+				<footer id="cta">
+					<span id="contact">Contact</span>
+					<span class="contact">(415) - 722 - 3815</span>
+					<span class="contact">hyunkim1209@gmail.com</span>
 					<ul class="icons">
 						<li><a href="https://www.linkedin.com/in/hyun-james-kim-531668a2/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
 						<li><a href="https://github.com/hyunckim" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon fa-resume"><span class="label">Resume</span></a></li>
 					</ul>
 				</footer>
 
